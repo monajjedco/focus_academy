@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "117eddd9-ff51-49a7-a806-4867f6271a9e",
+		"name": "R2F",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "novamnhaj@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "seniorfullstack",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_questions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWU4ZjgyNmU0N2Y4NmQzZDdmZWJjMTk2NGVhN2YyZGY3MTgyNDM3ZTBkYWE1YTc3OTAzMjM3Y2UyZWQ4NWYwZjdkMDBhOGRmMjdiNjUxYTIiLCJpYXQiOjE2MjE4OTUzNDgsIm5iZiI6MTYyMTg5NTM0OCwiZXhwIjoxNjUzNDMxMzQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NX1zol3KfCbYJTPHN_Ntm-q2iBy3OJryiWq-cXaZCGC0oA_2t_-8Wl-OfPBsZ-I45VAFr69rlufWDHB34TG8LGtzkmmxB3mjNRZ_osp87UKG0RFrPC4RXQdE-RQjqLZmkIAG4XwOwvBuGZxhFybqrLOWpFpK8WEEHBAMim5w4aAuvyuJHkwp8GMzGXV58ru4F4Ie7n-_rwnv0P1fkjm66kBC8l6H_E2OLsEQEUrTkUCfz00gWhcmHkVExz9pTkfV6ak4JW3EiRVX98Gzd6tj0ca3vGja6i78E0Fx_lgMW3L2GRynCQUzkuvIFn9daz6Cv_4WOeeLbc1ZG8KiCYTkTsi3GupZabUhwLDBFpophjHI-mUnV00qYtETLWIQqFHprTOutUf4iuP-HBcpUfZbX0zea8w_xILbmjTJO1ElD3buwXfB-gmWzhObcNDmQH4pEzrF_EyrJsVSsCq48tR8r04sGqGQ79HN2B308J49rMDsEpgCloTdZm7xLPSwXjS-8NOnJZqGA1wxKiwthdQb0M0n2WPt5TIpCSEguRigeEgyiuoOCI85h_WnNrEcVWpwXRNBrZLF9xI20Wg9qhW6pkS_uV3UmTspr8PNsKG9HNrUBvxuEgK0q_Lzc0SdcTb4rfiIhtphU_e5IFQT8vG8bbz8ncHROzlrmpqmY_PmyRs",
+							"type": "text"
+						},
+						{
+							"key": "question_type",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/explore_questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"explore_questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search_text",
+							"value": "ss",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWU4ZjgyNmU0N2Y4NmQzZDdmZWJjMTk2NGVhN2YyZGY3MTgyNDM3ZTBkYWE1YTc3OTAzMjM3Y2UyZWQ4NWYwZjdkMDBhOGRmMjdiNjUxYTIiLCJpYXQiOjE2MjE4OTUzNDgsIm5iZiI6MTYyMTg5NTM0OCwiZXhwIjoxNjUzNDMxMzQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NX1zol3KfCbYJTPHN_Ntm-q2iBy3OJryiWq-cXaZCGC0oA_2t_-8Wl-OfPBsZ-I45VAFr69rlufWDHB34TG8LGtzkmmxB3mjNRZ_osp87UKG0RFrPC4RXQdE-RQjqLZmkIAG4XwOwvBuGZxhFybqrLOWpFpK8WEEHBAMim5w4aAuvyuJHkwp8GMzGXV58ru4F4Ie7n-_rwnv0P1fkjm66kBC8l6H_E2OLsEQEUrTkUCfz00gWhcmHkVExz9pTkfV6ak4JW3EiRVX98Gzd6tj0ca3vGja6i78E0Fx_lgMW3L2GRynCQUzkuvIFn9daz6Cv_4WOeeLbc1ZG8KiCYTkTsi3GupZabUhwLDBFpophjHI-mUnV00qYtETLWIQqFHprTOutUf4iuP-HBcpUfZbX0zea8w_xILbmjTJO1ElD3buwXfB-gmWzhObcNDmQH4pEzrF_EyrJsVSsCq48tR8r04sGqGQ79HN2B308J49rMDsEpgCloTdZm7xLPSwXjS-8NOnJZqGA1wxKiwthdQb0M0n2WPt5TIpCSEguRigeEgyiuoOCI85h_WnNrEcVWpwXRNBrZLF9xI20Wg9qhW6pkS_uV3UmTspr8PNsKG9HNrUBvxuEgK0q_Lzc0SdcTb4rfiIhtphU_e5IFQT8vG8bbz8ncHROzlrmpqmY_PmyRs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/search_question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"search_question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "question_status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWU4ZjgyNmU0N2Y4NmQzZDdmZWJjMTk2NGVhN2YyZGY3MTgyNDM3ZTBkYWE1YTc3OTAzMjM3Y2UyZWQ4NWYwZjdkMDBhOGRmMjdiNjUxYTIiLCJpYXQiOjE2MjE4OTUzNDgsIm5iZiI6MTYyMTg5NTM0OCwiZXhwIjoxNjUzNDMxMzQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NX1zol3KfCbYJTPHN_Ntm-q2iBy3OJryiWq-cXaZCGC0oA_2t_-8Wl-OfPBsZ-I45VAFr69rlufWDHB34TG8LGtzkmmxB3mjNRZ_osp87UKG0RFrPC4RXQdE-RQjqLZmkIAG4XwOwvBuGZxhFybqrLOWpFpK8WEEHBAMim5w4aAuvyuJHkwp8GMzGXV58ru4F4Ie7n-_rwnv0P1fkjm66kBC8l6H_E2OLsEQEUrTkUCfz00gWhcmHkVExz9pTkfV6ak4JW3EiRVX98Gzd6tj0ca3vGja6i78E0Fx_lgMW3L2GRynCQUzkuvIFn9daz6Cv_4WOeeLbc1ZG8KiCYTkTsi3GupZabUhwLDBFpophjHI-mUnV00qYtETLWIQqFHprTOutUf4iuP-HBcpUfZbX0zea8w_xILbmjTJO1ElD3buwXfB-gmWzhObcNDmQH4pEzrF_EyrJsVSsCq48tR8r04sGqGQ79HN2B308J49rMDsEpgCloTdZm7xLPSwXjS-8NOnJZqGA1wxKiwthdQb0M0n2WPt5TIpCSEguRigeEgyiuoOCI85h_WnNrEcVWpwXRNBrZLF9xI20Wg9qhW6pkS_uV3UmTspr8PNsKG9HNrUBvxuEgK0q_Lzc0SdcTb4rfiIhtphU_e5IFQT8vG8bbz8ncHROzlrmpqmY_PmyRs",
+							"type": "text"
+						},
+						{
+							"key": "question_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "new_status",
+							"value": "Answered",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/change_question_status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"change_question_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question_text",
+							"value": "..",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWU4ZjgyNmU0N2Y4NmQzZDdmZWJjMTk2NGVhN2YyZGY3MTgyNDM3ZTBkYWE1YTc3OTAzMjM3Y2UyZWQ4NWYwZjdkMDBhOGRmMjdiNjUxYTIiLCJpYXQiOjE2MjE4OTUzNDgsIm5iZiI6MTYyMTg5NTM0OCwiZXhwIjoxNjUzNDMxMzQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NX1zol3KfCbYJTPHN_Ntm-q2iBy3OJryiWq-cXaZCGC0oA_2t_-8Wl-OfPBsZ-I45VAFr69rlufWDHB34TG8LGtzkmmxB3mjNRZ_osp87UKG0RFrPC4RXQdE-RQjqLZmkIAG4XwOwvBuGZxhFybqrLOWpFpK8WEEHBAMim5w4aAuvyuJHkwp8GMzGXV58ru4F4Ie7n-_rwnv0P1fkjm66kBC8l6H_E2OLsEQEUrTkUCfz00gWhcmHkVExz9pTkfV6ak4JW3EiRVX98Gzd6tj0ca3vGja6i78E0Fx_lgMW3L2GRynCQUzkuvIFn9daz6Cv_4WOeeLbc1ZG8KiCYTkTsi3GupZabUhwLDBFpophjHI-mUnV00qYtETLWIQqFHprTOutUf4iuP-HBcpUfZbX0zea8w_xILbmjTJO1ElD3buwXfB-gmWzhObcNDmQH4pEzrF_EyrJsVSsCq48tR8r04sGqGQ79HN2B308J49rMDsEpgCloTdZm7xLPSwXjS-8NOnJZqGA1wxKiwthdQb0M0n2WPt5TIpCSEguRigeEgyiuoOCI85h_WnNrEcVWpwXRNBrZLF9xI20Wg9qhW6pkS_uV3UmTspr8PNsKG9HNrUBvxuEgK0q_Lzc0SdcTb4rfiIhtphU_e5IFQT8vG8bbz8ncHROzlrmpqmY_PmyRs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/add_question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"add_question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "answer_text",
+							"value": "..",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWU4ZjgyNmU0N2Y4NmQzZDdmZWJjMTk2NGVhN2YyZGY3MTgyNDM3ZTBkYWE1YTc3OTAzMjM3Y2UyZWQ4NWYwZjdkMDBhOGRmMjdiNjUxYTIiLCJpYXQiOjE2MjE4OTUzNDgsIm5iZiI6MTYyMTg5NTM0OCwiZXhwIjoxNjUzNDMxMzQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NX1zol3KfCbYJTPHN_Ntm-q2iBy3OJryiWq-cXaZCGC0oA_2t_-8Wl-OfPBsZ-I45VAFr69rlufWDHB34TG8LGtzkmmxB3mjNRZ_osp87UKG0RFrPC4RXQdE-RQjqLZmkIAG4XwOwvBuGZxhFybqrLOWpFpK8WEEHBAMim5w4aAuvyuJHkwp8GMzGXV58ru4F4Ie7n-_rwnv0P1fkjm66kBC8l6H_E2OLsEQEUrTkUCfz00gWhcmHkVExz9pTkfV6ak4JW3EiRVX98Gzd6tj0ca3vGja6i78E0Fx_lgMW3L2GRynCQUzkuvIFn9daz6Cv_4WOeeLbc1ZG8KiCYTkTsi3GupZabUhwLDBFpophjHI-mUnV00qYtETLWIQqFHprTOutUf4iuP-HBcpUfZbX0zea8w_xILbmjTJO1ElD3buwXfB-gmWzhObcNDmQH4pEzrF_EyrJsVSsCq48tR8r04sGqGQ79HN2B308J49rMDsEpgCloTdZm7xLPSwXjS-8NOnJZqGA1wxKiwthdQb0M0n2WPt5TIpCSEguRigeEgyiuoOCI85h_WnNrEcVWpwXRNBrZLF9xI20Wg9qhW6pkS_uV3UmTspr8PNsKG9HNrUBvxuEgK0q_Lzc0SdcTb4rfiIhtphU_e5IFQT8vG8bbz8ncHROzlrmpqmY_PmyRs",
+							"type": "text"
+						},
+						{
+							"key": "customer_id",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "support_id",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "question_id",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/add_answer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"add_answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWU4ZjgyNmU0N2Y4NmQzZDdmZWJjMTk2NGVhN2YyZGY3MTgyNDM3ZTBkYWE1YTc3OTAzMjM3Y2UyZWQ4NWYwZjdkMDBhOGRmMjdiNjUxYTIiLCJpYXQiOjE2MjE4OTUzNDgsIm5iZiI6MTYyMTg5NTM0OCwiZXhwIjoxNjUzNDMxMzQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NX1zol3KfCbYJTPHN_Ntm-q2iBy3OJryiWq-cXaZCGC0oA_2t_-8Wl-OfPBsZ-I45VAFr69rlufWDHB34TG8LGtzkmmxB3mjNRZ_osp87UKG0RFrPC4RXQdE-RQjqLZmkIAG4XwOwvBuGZxhFybqrLOWpFpK8WEEHBAMim5w4aAuvyuJHkwp8GMzGXV58ru4F4Ie7n-_rwnv0P1fkjm66kBC8l6H_E2OLsEQEUrTkUCfz00gWhcmHkVExz9pTkfV6ak4JW3EiRVX98Gzd6tj0ca3vGja6i78E0Fx_lgMW3L2GRynCQUzkuvIFn9daz6Cv_4WOeeLbc1ZG8KiCYTkTsi3GupZabUhwLDBFpophjHI-mUnV00qYtETLWIQqFHprTOutUf4iuP-HBcpUfZbX0zea8w_xILbmjTJO1ElD3buwXfB-gmWzhObcNDmQH4pEzrF_EyrJsVSsCq48tR8r04sGqGQ79HN2B308J49rMDsEpgCloTdZm7xLPSwXjS-8NOnJZqGA1wxKiwthdQb0M0n2WPt5TIpCSEguRigeEgyiuoOCI85h_WnNrEcVWpwXRNBrZLF9xI20Wg9qhW6pkS_uV3UmTspr8PNsKG9HNrUBvxuEgK0q_Lzc0SdcTb4rfiIhtphU_e5IFQT8vG8bbz8ncHROzlrmpqmY_PmyRs",
+							"type": "text"
+						},
+						{
+							"key": "question_id",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/R2F/public/api/delete_question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"R2F",
+						"public",
+						"api",
+						"delete_question"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
