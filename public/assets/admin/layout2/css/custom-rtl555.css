@@ -1,0 +1,69 @@
+.show-grid {
+  background-color: #eee !important;
+  border: 0px solid #008000;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  
+    color: #939393;
+}
+.show-grid {
+  margin: 0px 0 !important;
+}
+
+.show-grid1 {
+  background-color: #C0C0C0 !important;
+  border: 0px solid #008000;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+.show-grid {
+  margin: 0px 0 !important;
+}
+.show-grid2 {
+  background-color: #F0FFF0 !important;
+  border: 0px solid #008000;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  color: #0000ff;
+  font-size:12pt;
+}
+
+.show-grid3 {
+  background-color: #F0FFF0 !important;
+  border: 0px solid #008000;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  color: #008000;
+  font-size:14pt;
+}
+
+.show-grid4 {
+  background-color: #FCF4DC !important;
+  border: 0px solid #008000;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  color: #008000;
+  font-size:16pt;
+}
+
+
+
+/* here you can put your own css to customize and override the theme */
+
+/***
+Rounded Portlets
+***/
+/*
+.portlet {
+	border-radius: 4px !important;
+}
+
+.portlet .portlet-title {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+.portlet .portlet-body,
+.portlet .portlet-body .form-actions  {
+	border-radius: 0px 0px 4px 4px !important;
+}
+*/
