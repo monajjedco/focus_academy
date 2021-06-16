@@ -23,6 +23,29 @@ public function __construct()
     }
 
 
+
+
+//-----------------------------  Default Videos -------------------------------//
+public function all_videos () {
+
+return view('centre.media',compact(''));
+}
+//-----------------------------  Upload  -------------------------------//
+public function upload_video (request $request) {
+          
+                if( in_array($request->video->getClientOriginalExtension(), ['mp4']) )
+                {
+                   $vid = 'main.'.$request->video->getClientOriginalExtension();
+                   $request->video->move('upload_dir/render_videos', $vid); 
+                   $note = 'Uploading Completed successfully ...'  ;
+                }
+                else
+                {
+                  $note =  ' Only MP4 is accepted ... '  ;
+                } 
+
+return response()->json([$note]); 
+}
 //-----------------------------  Default  -------------------------------//
 public function all_classes () {
 
