@@ -97,6 +97,7 @@
 
 				<li><a target="_parent" href="{{ URL::to('all.students') }}"><i class="icon-users font-yellow"></i><h3 class="title"> Students </h3></a></li>
 
+				<li><a target="_parent" href="{{ URL::to('all.videos') }}"><i class="fa fa-video-camera  font-yellow"></i><h3 class="title"> Videos </h3></a></li>
 
 
 				<!-- ================== ADMIN ================== -->
