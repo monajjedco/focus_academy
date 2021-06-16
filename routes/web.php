@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 */
 //---------------------------------------------------------------------------------
 
+Route::get('all.videos', 'classcontroller@all_videos') ;
+Route::post('upload_video', 'classcontroller@upload_video') ;
 
 /////////////////////////////////////////////////////////////////////////AJAX_class
 Route::get('all.classes', 'classcontroller@all_classes') ;
@@ -25,22 +27,6 @@ Route::get('get_students/{id}', 'studentcontroller@get_students') ;
 Route::post('insert_student', 'studentcontroller@insert_student') ;
 Route::post('edite_student', 'studentcontroller@edite_student') ;
 Route::get('delete_student/{student}', 'studentcontroller@delete_student') ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
